@@ -152,7 +152,7 @@ console.log(JsUser.greetingTwo());
 //<---------------------------------------------Objects part 2 in depth------------------------------------------------->
 
 
-// const tinderUser = new Object()
+// const tinderUser = new Object()  => singleton
 const tinderUser = {}
 
 tinderUser.id = "123abc"
@@ -165,13 +165,15 @@ const regularUser = {
     email: "some@gmail.com",
     fullname: {
         userfullname: {
-            firstname: "hitesh",
-            lastname: "choudhary"
+            firstname: "Apeksha",
+            lastname: "Jain"
         }
     }
 }
 
-// console.log(regularUser.fullname.userfullname.firstname);
+console.log(regularUser.fullname);
+console.log(regularUser.fullname.userfullname);
+console.log(regularUser.fullname.userfullname.firstname);
 
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
@@ -206,7 +208,7 @@ users[1].email
 // console.log(Object.values(tinderUser));
 // console.log(Object.entries(tinderUser));
 
-// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); => hasOwnProperty is prototype
 
 
 const course = {
@@ -218,6 +220,7 @@ const course = {
 // course.courseInstructor
 
 const {courseInstructor: instructor} = course
+// is tarah se key ko chota kar sakte hai
 
 // console.log(courseInstructor);
 console.log(instructor);
