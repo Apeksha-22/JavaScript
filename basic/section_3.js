@@ -437,6 +437,12 @@ Strict mode: this undefined hoga.
     console.log(`DB CONNECTED`);
 })();
 
+// (function ki defination)(function ka execution) or semicolon lgana bhi bhut jruri hai kyuki js ko pta nhi ki context ko kha
+// per end karna hai isliye semicolon ka lgana jruri hai
+/*global scope ke pollution se problem hoti hai kaiyi baar toh jo bhi global scope ke varible hai declaration hai uske pollution
+ko remove karne ke liye Immediately Invoked Function Expressions ka use kiya jata or function ko immediate 
+call ya invoke ke liye bhi */
+
 ( (name) => {
     console.log(`DB CONNECTED TWO ${name}`);
-} )('hitesh')
+} )('apeksha')
